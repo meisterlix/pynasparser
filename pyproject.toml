@@ -1,0 +1,38 @@
+[project]
+name = "pynasparser"
+version = "0.3.0"
+description = "package for parsing NAS-format xml files for official german AAA-Schema defined in the GeoInfoDok into (Geo)Pandas (Geo)DataFrames"
+readme = "README.md"
+authors = [
+    { name = "meisterlix", email = "76969431+meisterlix@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fiona>=1.10.1",
+    "geoalchemy2>=0.18.1",
+    "geopandas>=1.1.1",
+    "lxml>=6.0.2",
+    "numpy>=2.3.5",
+    "openpyxl>=3.1.5",
+    "owslib>=0.35.0",
+    "psycopg2-binary>=2.9.11",
+    "shapely>=2.1.2",
+    "sqlalchemy>=2.0.44",
+]
+
+[project.scripts]
+pynasparser = "pynasparser:main"
+
+[build-system]
+requires = ["uv_build>=0.8.12,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "lxml-stubs>=0.5.1",
+    "pytest>=9.0.1",
+    "pytest-mock>=3.15.1",
+    "python-dotenv>=1.2.1",
+    "types-geopandas>=1.1.1.20250829",
+    "types-psycopg2>=2.9.21.20251012",
+]
