@@ -412,7 +412,7 @@ class AX_Extract:
             flurstuecke_data["zeitpunktDerEntstehung"].append(
                 ax_zeitpunkt_der_entstehung
             )
-            flurstuecke_data["aa_lebenszeitintervall_beginnt"] = (
+            flurstuecke_data["aa_lebenszeitintervall_beginnt"].append(
                 aa_lebenszeitintervall_beginnt
             )
 
