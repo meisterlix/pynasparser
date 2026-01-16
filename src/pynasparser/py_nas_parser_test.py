@@ -1,7 +1,7 @@
 from io import BytesIO
 from pathlib import Path
 
-from pynasparser.alkis_parser import AX_Extract
+from pynasparser.py_nas_parser import AX_Extract
 
 TEST_DATA_DIR = "test_data"
 
@@ -18,7 +18,9 @@ def main():
             input_xml_bytes = get_xml_bytesIO(str(xml_path.absolute()))
 
             ax_extract = AX_Extract(input_xml_bytes)
-            print(ax_extract)
+            # ax_extract.ax_person.to_csv(
+            #     f"ax_person_{xml_path.name}.csv", sep="|", index=False
+            # )
 
 
 if __name__ == "__main__":
